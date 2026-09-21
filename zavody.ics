@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//OndrejKral235//Zavodni kalendar//CS
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:j50-nechalov-20261003@ondrejkral235.github.io
+DTSTAMP:20260921T000000Z
+DTSTART;VALUE=DATE:20261003
+DTEND;VALUE=DATE:20261004
+SUMMARY:🏁 Závod padesátek na 121 minut Nechálov
+LOCATION:Liberec
+DESCRIPTION:Silniční závod na 121 minut.
+URL:https://j50zavody.cz/zavody.php
+END:VEVENT
+END:VCALENDAR
