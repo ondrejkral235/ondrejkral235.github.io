@@ -1,6 +1,8 @@
 name: Aktualizace J50 kalendáře
 
 on:
+  push:
+    branches: ["main"]
   schedule:
     - cron: "17 */4 * * *"
   workflow_dispatch:
