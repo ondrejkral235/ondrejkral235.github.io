@@ -2,6 +2,7 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//OndrejKral235//Zavodni kalendar//CS
 CALSCALE:GREGORIAN
+METHOD:PUBLISH
 BEGIN:VEVENT
 UID:j50-nechalov-20261003@ondrejkral235.github.io
 DTSTAMP:20260921T000000Z
@@ -10,6 +11,16 @@ DTEND;VALUE=DATE:20261004
 SUMMARY:🏁 Závod padesátek na 121 minut Nechálov
 LOCATION:Liberec
 DESCRIPTION:Silniční závod na 121 minut.
+URL:https://j50zavody.cz/zavody.php
+END:VEVENT
+BEGIN:VEVENT
+UID:j50-louny-20261107@ondrejkral235.github.io
+DTSTAMP:20260922T123400Z
+DTSTART;VALUE=DATE:20261107
+DTEND;VALUE=DATE:20261108
+SUMMARY:🏁 Závody v Lounech
+LOCATION:Louny
+DESCRIPTION:Závod z kalendáře J50.
 URL:https://j50zavody.cz/zavody.php
 END:VEVENT
 END:VCALENDAR
