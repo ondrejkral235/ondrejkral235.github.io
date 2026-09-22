@@ -1,10 +1,10 @@
 import re
 import html
 import requests
-from bs4 import BeautifulSoup
 from datetime import datetime, timedelta
 
 SOURCE = "https://j50zavody.cz/zavody.php"
+READER = "https://r.jina.ai/http://j50zavody.cz/zavody.php"
 OUTPUT = "zavody.ics"
 
 def clean(value):
@@ -13,39 +13,30 @@ def clean(value):
 def ics_escape(value):
     return clean(value).replace("\\", "\\\\").replace(";", "\\;").replace(",", "\\,").replace("\n", "\\n")
 
-r = requests.get(SOURCE, timeout=30, headers={"User-Agent": "Mozilla/5.0"})
+r = requests.get(READER, timeout=60, headers={"User-Agent": "Mozilla/5.0"})
 r.raise_for_status()
-soup = BeautifulSoup(r.text, "html.parser")
+text = r.text
 
 events = []
+lines = text.splitlines()
 
-# Each race on the J50 page is headed by an h3. The following h4 elements
-# contain date, district, track type and race system.
-headings = soup.find_all("h3")
-for heading in headings:
-    name = clean(heading.get_text(" ", strip=True))
-    if not name or name in {"Filtrace", "Důležité odkazy", "Mohlo by vás zajímat", "Kontakt"}:
+for i, line in enumerate(lines):
+    # Jina renders the J50 race names as level-3 Markdown headings.
+    if not line.startswith("### "):
         continue
 
-    values = []
-    node = heading.find_next_sibling()
-    steps = 0
-    while node is not None and steps < 20:
-        if getattr(node, "name", None) == "h3":
-            break
-        text = clean(node.get_text(" ", strip=True))
-        if text:
-            values.append(text)
-        node = node.find_next_sibling()
-        steps += 1
+    name = clean(re.sub(r"^###\s+", "", line))
+    if not name or name in {"Seznam závodů", "Filtrace", "Důležité odkazy", "Mohlo by vás zajímat", "Kontakt"}:
+        continue
 
-    block_text = " | ".join(values)
+    block = []
+    for nxt in lines[i + 1:i + 18]:
+        if nxt.startswith("### "):
+            break
+        block.append(clean(re.sub(r"^#+\s*", "", nxt)))
+
+    block_text = " | ".join(x for x in block if x)
     date_match = re.search(r"(\d{1,2})\.\s*(\d{1,2})\.\s*(\d{4})", block_text)
-    if not date_match:
-        # Fallback: search a small parent block.
-        parent = heading.parent
-        block_text = clean(parent.get_text(" ", strip=True))
-        date_match = re.search(r"(\d{1,2})\.\s*(\d{1,2})\.\s*(\d{4})", block_text)
     if not date_match:
         continue
 
@@ -60,26 +51,6 @@ for heading in headings:
     typ = clean(typ_match.group(1)) if typ_match else ""
     system = clean(system_match.group(1)) if system_match else ""
 
-    link = None
-    container = heading.parent
-    for a in container.find_all("a", href=True):
-        if "zobrazit závod" in clean(a.get_text(" ", strip=True)).lower():
-            link = a
-            break
-
-    if link is None:
-        # Search the nearest following "Zobrazit závod" link.
-        a = heading.find_next("a", href=True)
-        if a and "zobrazit závod" in clean(a.get_text(" ", strip=True)).lower():
-            link = a
-
-    url = link.get("href", SOURCE) if link else SOURCE
-    if url.startswith("/"):
-        url = "https://j50zavody.cz" + url
-    elif not url.startswith("http"):
-        url = SOURCE
-
-    uid = re.sub(r"[^a-z0-9]+", "-", (name + "-" + date).lower()).strip("-")
     description_parts = []
     if typ:
         description_parts.append("Typ trati: " + typ)
@@ -87,12 +58,13 @@ for heading in headings:
         description_parts.append("Systém: " + system)
     description = " | ".join(description_parts)
 
-    events.append((uid, date, name, location, description, url))
+    uid = re.sub(r"[^a-z0-9]+", "-", (name + "-" + date).lower()).strip("-")
+    events.append((uid, date, name, location, description, SOURCE))
 
 unique = {event[0]: event for event in events}
 events = sorted(unique.values(), key=lambda e: (e[1], e[2]))
 
-lines = [
+lines_out = [
     "BEGIN:VCALENDAR",
     "VERSION:2.0",
     "PRODID:-//OndrejKral235//J50 Zavodni kalendar//CS",
@@ -104,7 +76,7 @@ stamp = datetime.utcnow().strftime("%Y%m%dT%H%M%SZ")
 for uid, date, name, location, description, url in events:
     start = datetime.strptime(date, "%Y%m%d")
     end = start + timedelta(days=1)
-    lines += [
+    lines_out += [
         "BEGIN:VEVENT",
         f"UID:{ics_escape(uid)}@ondrejkral235.github.io",
         f"DTSTAMP:{stamp}",
@@ -117,8 +89,8 @@ for uid, date, name, location, description, url in events:
         "END:VEVENT",
     ]
 
-lines.append("END:VCALENDAR")
+lines_out.append("END:VCALENDAR")
 with open(OUTPUT, "w", encoding="utf-8", newline="\n") as f:
-    f.write("\n".join(lines) + "\n")
+    f.write("\n".join(lines_out) + "\n")
 
 print(f"Generated {len(events)} calendar events.")
