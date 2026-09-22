@@ -1,26 +1,266 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//OndrejKral235//Zavodni kalendar//CS
+PRODID:-//OndrejKral235//J50 Zavodni kalendar//CS
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
-UID:j50-nechalov-20261003@ondrejkral235.github.io
-DTSTAMP:20260921T000000Z
-DTSTART;VALUE=DATE:20261003
-DTEND;VALUE=DATE:20261004
-SUMMARY:🏁 Závod padesátek na 121 minut Nechálov
-LOCATION:Liberec
-DESCRIPTION:Silniční závod na 121 minut.
+UID:off-road-fichtel-day-2026-20260228@ondrejkral235.github.io
+DTSTAMP:20260922T103906Z
+DTSTART;VALUE=DATE:20260228
+DTEND;VALUE=DATE:20260301
+SUMMARY:Off-Road Fichtel day 2026
+LOCATION:| Tábor |
+DESCRIPTION:Typ trati: | Terénní | | Systém: | 2 x 15 min rozjížďka. 2 x 60 min. závod
 URL:https://j50zavody.cz/zavody.php
 END:VEVENT
 BEGIN:VEVENT
-UID:j50-louny-20261107@ondrejkral235.github.io
-DTSTAMP:20260922T123400Z
+UID:fichtl-cup-20260425@ondrejkral235.github.io
+DTSTAMP:20260922T103906Z
+DTSTART;VALUE=DATE:20260425
+DTEND;VALUE=DATE:20260426
+SUMMARY:Fichtl cup
+LOCATION:| Strakonice |
+DESCRIPTION:Typ trati: | Terénní | | Systém: | 2x20 minut
+URL:https://j50zavody.cz/zavody.php
+END:VEVENT
+BEGIN:VEVENT
+UID:austerlicz-fechtl-hill-cup-20260426@ondrejkral235.github.io
+DTSTAMP:20260922T103906Z
+DTSTART;VALUE=DATE:20260426
+DTEND;VALUE=DATE:20260427
+SUMMARY:AusterliCZ Fechtl Hill Cup
+LOCATION:| Vyškov |
+DESCRIPTION:Typ trati: | Silniční | | Systém: | Závod do vrchu
+URL:https://j50zavody.cz/zavody.php
+END:VEVENT
+BEGIN:VEVENT
+UID:licom-lick-fichtlcup-2026-20260509@ondrejkral235.github.io
+DTSTAMP:20260922T103906Z
+DTSTART;VALUE=DATE:20260509
+DTEND;VALUE=DATE:20260510
+SUMMARY:Licomělický fichtlcup 2026
+LOCATION:| Chrudim |
+DESCRIPTION:Typ trati: | Terénní | | Systém: | Pětihodinový závod
+URL:https://j50zavody.cz/zavody.php
+END:VEVENT
+BEGIN:VEVENT
+UID:fichtl-mazec-24-hodin-20260522@ondrejkral235.github.io
+DTSTAMP:20260922T103906Z
+DTSTART;VALUE=DATE:20260522
+DTEND;VALUE=DATE:20260523
+SUMMARY:Fichtl MAZEC 24 hodin
+LOCATION:| Jičín |
+DESCRIPTION:Typ trati: | Terénní | | Systém: | 24 hodinovka
+URL:https://j50zavody.cz/zavody.php
+END:VEVENT
+BEGIN:VEVENT
+UID:fichtl-cup-florida-p-r-c-seri-l-20260530@ondrejkral235.github.io
+DTSTAMP:20260922T103906Z
+DTSTART;VALUE=DATE:20260530
+DTEND;VALUE=DATE:20260531
+SUMMARY:Fichtl cup Florida P:R:C: seriál
+LOCATION:| České Budějovice |
+DESCRIPTION:Typ trati: | Terénní | | Systém: | 2x20 minut +1 kolo
+URL:https://j50zavody.cz/zavody.php
+END:VEVENT
+BEGIN:VEVENT
+UID:babetta-ecorace-20260620@ondrejkral235.github.io
+DTSTAMP:20260922T103906Z
+DTSTART;VALUE=DATE:20260620
+DTEND;VALUE=DATE:20260621
+SUMMARY:Babetta ecorace
+LOCATION:| Nový Jičín |
+DESCRIPTION:Typ trati: | Silniční | | Systém: | Na 1L paliva
+URL:https://j50zavody.cz/zavody.php
+END:VEVENT
+BEGIN:VEVENT
+UID:fichtl-cup-20260627@ondrejkral235.github.io
+DTSTAMP:20260922T103906Z
+DTSTART;VALUE=DATE:20260627
+DTEND;VALUE=DATE:20260628
+SUMMARY:Fichtl Cup
+LOCATION:| Havlíčkův Brod |
+DESCRIPTION:Typ trati: | Terénní | | Systém: | Počet kol
+URL:https://j50zavody.cz/zavody.php
+END:VEVENT
+BEGIN:VEVENT
+UID:moped-rallye-rycht-ov-20260627@ondrejkral235.github.io
+DTSTAMP:20260922T103906Z
+DTSTART;VALUE=DATE:20260627
+DTEND;VALUE=DATE:20260628
+SUMMARY:Moped Rallye Rychtářov
+LOCATION:| Vyškov |
+DESCRIPTION:Typ trati: | Silniční | | Systém: | 2x 8 kol
+URL:https://j50zavody.cz/zavody.php
+END:VEVENT
+BEGIN:VEVENT
+UID:fichtl-cup-nov-v-elnice-20260704@ondrejkral235.github.io
+DTSTAMP:20260922T103906Z
+DTSTART;VALUE=DATE:20260704
+DTEND;VALUE=DATE:20260705
+SUMMARY:Fichtl Cup Nová Včelnice
+LOCATION:| Jindřichův Hradec |
+DESCRIPTION:Typ trati: | Terénní | | Systém: | 2x20min+2kola
+URL:https://j50zavody.cz/zavody.php
+END:VEVENT
+BEGIN:VEVENT
+UID:helma-cup-20260704@ondrejkral235.github.io
+DTSTAMP:20260922T103906Z
+DTSTART;VALUE=DATE:20260704
+DTEND;VALUE=DATE:20260705
+SUMMARY:Helma cup
+LOCATION:| Jičín |
+DESCRIPTION:Typ trati: | Terénní | | Systém: | 3×6kol
+URL:https://j50zavody.cz/zavody.php
+END:VEVENT
+BEGIN:VEVENT
+UID:amkdb-fichtl-x-6h-20260725@ondrejkral235.github.io
+DTSTAMP:20260922T103906Z
+DTSTART;VALUE=DATE:20260725
+DTEND;VALUE=DATE:20260726
+SUMMARY:AMKDB Fichtl X - 6h
+LOCATION:| Mladá Boleslav |
+DESCRIPTION:Typ trati: | Terénní | | Systém: | 6ti hodinový týmový závod
+URL:https://j50zavody.cz/zavody.php
+END:VEVENT
+BEGIN:VEVENT
+UID:fichtl-cup-hlohovi-ky-20260725@ondrejkral235.github.io
+DTSTAMP:20260922T103906Z
+DTSTART;VALUE=DATE:20260725
+DTEND;VALUE=DATE:20260726
+SUMMARY:Fichtl cup Hlohovičky
+LOCATION:| Rokycany |
+DESCRIPTION:Typ trati: | Terénní | | Systém: | 2x30minut
+URL:https://j50zavody.cz/zavody.php
+END:VEVENT
+BEGIN:VEVENT
+UID:skorkovsk-zlat-ventilek-20260801@ondrejkral235.github.io
+DTSTAMP:20260922T103906Z
+DTSTART;VALUE=DATE:20260801
+DTEND;VALUE=DATE:20260802
+SUMMARY:Skorkovský Zlatý Ventilek
+LOCATION:| Mladá Boleslav |
+DESCRIPTION:Typ trati: | Terénní | | Systém: | 2 kola na čas\, jízda zručnosti
+URL:https://j50zavody.cz/zavody.php
+END:VEVENT
+BEGIN:VEVENT
+UID:fechtl-cup-trbou-any-20260808@ondrejkral235.github.io
+DTSTAMP:20260922T103906Z
+DTSTART;VALUE=DATE:20260808
+DTEND;VALUE=DATE:20260809
+SUMMARY:Fechtl cup Trboušany
+LOCATION:| Brno-venkov |
+DESCRIPTION:Typ trati: | Terénní | | Systém: | 3 x 10 minut
+URL:https://j50zavody.cz/zavody.php
+END:VEVENT
+BEGIN:VEVENT
+UID:velk-z-vod-mal-ch-motorek-20260808@ondrejkral235.github.io
+DTSTAMP:20260922T103906Z
+DTSTART;VALUE=DATE:20260808
+DTEND;VALUE=DATE:20260809
+SUMMARY:Velký závod malých motorek
+LOCATION:| Benešov |
+DESCRIPTION:Typ trati: | Terénní | | Systém: | 3kola\, rozjížďky
+URL:https://j50zavody.cz/zavody.php
+END:VEVENT
+BEGIN:VEVENT
+UID:fichtl-cup-ok-esane-20260815@ondrejkral235.github.io
+DTSTAMP:20260922T103906Z
+DTSTART;VALUE=DATE:20260815
+DTEND;VALUE=DATE:20260816
+SUMMARY:Fichtl cup Okřesaneč
+LOCATION:| Kutná Hora |
+DESCRIPTION:Typ trati: | Terénní | | Systém: | 20 + 1 kolo
+URL:https://j50zavody.cz/zavody.php
+END:VEVENT
+BEGIN:VEVENT
+UID:ml-kojedsk-pades-tka-2026-20260815@ondrejkral235.github.io
+DTSTAMP:20260922T103906Z
+DTSTART;VALUE=DATE:20260815
+DTEND;VALUE=DATE:20260816
+SUMMARY:Mlékojedská padesátka 2026
+LOCATION:| Mělník |
+DESCRIPTION:Typ trati: | Silniční | | Systém: | 60 minut
+URL:https://j50zavody.cz/zavody.php
+END:VEVENT
+BEGIN:VEVENT
+UID:t-kovsk-fichtl-cup-20260822@ondrejkral235.github.io
+DTSTAMP:20260922T103906Z
+DTSTART;VALUE=DATE:20260822
+DTEND;VALUE=DATE:20260823
+SUMMARY:Těškovský Fichtl cup
+LOCATION:| Rokycany |
+DESCRIPTION:Typ trati: | Terénní | | Systém: | 3x15min
+URL:https://j50zavody.cz/zavody.php
+END:VEVENT
+BEGIN:VEVENT
+UID:fichtl-cup-20260829@ondrejkral235.github.io
+DTSTAMP:20260922T103906Z
+DTSTART;VALUE=DATE:20260829
+DTEND;VALUE=DATE:20260830
+SUMMARY:Fichtl Cup
+LOCATION:| Havlíčkův Brod |
+DESCRIPTION:Typ trati: | Terénní | | Systém: | Počet kol
+URL:https://j50zavody.cz/zavody.php
+END:VEVENT
+BEGIN:VEVENT
+UID:fichtlmazec-ko-lov-kam-nka-20260829@ondrejkral235.github.io
+DTSTAMP:20260922T103906Z
+DTSTART;VALUE=DATE:20260829
+DTEND;VALUE=DATE:20260830
+SUMMARY:Fichtlmazec Košťálov - Kamínka
+LOCATION:| Semily |
+DESCRIPTION:Typ trati: | Terénní | | Systém: | 6 hodin
+URL:https://j50zavody.cz/zavody.php
+END:VEVENT
+BEGIN:VEVENT
+UID:6-hodinov-fichtl-cup-pravice-20260905@ondrejkral235.github.io
+DTSTAMP:20260922T103906Z
+DTSTART;VALUE=DATE:20260905
+DTEND;VALUE=DATE:20260906
+SUMMARY:6 hodinový fichtl cup pravice
+LOCATION:| Znojmo |
+DESCRIPTION:Typ trati: | Terénní | | Systém: | 6 hodin
+URL:https://j50zavody.cz/zavody.php
+END:VEVENT
+BEGIN:VEVENT
+UID:fichtl-cup-opatov-20260912@ondrejkral235.github.io
+DTSTAMP:20260922T103906Z
+DTSTART;VALUE=DATE:20260912
+DTEND;VALUE=DATE:20260913
+SUMMARY:Fichtl cup Opatov
+LOCATION:| Třebíč |
+DESCRIPTION:Typ trati: | Terénní | | Systém: | 3x10min +1kolo
+URL:https://j50zavody.cz/zavody.php
+END:VEVENT
+BEGIN:VEVENT
+UID:fichtlcup-mi-etice-20260920@ondrejkral235.github.io
+DTSTAMP:20260922T103906Z
+DTSTART;VALUE=DATE:20260920
+DTEND;VALUE=DATE:20260921
+SUMMARY:Fichtlcup Miřetice
+LOCATION:| Benešov |
+DESCRIPTION:Typ trati: | Terénní | | Systém: | 30minut
+URL:https://j50zavody.cz/zavody.php
+END:VEVENT
+BEGIN:VEVENT
+UID:z-vod-pades-tek-na-121-minut-nech-lov-20261003@ondrejkral235.github.io
+DTSTAMP:20260922T103906Z
+DTSTART;VALUE=DATE:20261003
+DTEND;VALUE=DATE:20261004
+SUMMARY:závod padesátek na 121 minut Nechálov
+LOCATION:| Liberec |
+DESCRIPTION:Typ trati: | Silniční | | Systém: | Hromadný start na 121 minut
+URL:https://j50zavody.cz/zavody.php
+END:VEVENT
+BEGIN:VEVENT
+UID:fichtl-cup-volenice-20261107@ondrejkral235.github.io
+DTSTAMP:20260922T103906Z
 DTSTART;VALUE=DATE:20261107
 DTEND;VALUE=DATE:20261108
-SUMMARY:🏁 Závody v Lounech
-LOCATION:Louny
-DESCRIPTION:Závod z kalendáře J50.
+SUMMARY:Fichtl Cup Volenice
+LOCATION:| Louny |
+DESCRIPTION:Typ trati: | Terénní | | Systém: | 2x20 minut+2 kola
 URL:https://j50zavody.cz/zavody.php
 END:VEVENT
 END:VCALENDAR
